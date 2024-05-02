@@ -2,6 +2,8 @@ package ru.iteco.fmhandroid.ui.steps;
 
 import static ru.iteco.fmhandroid.ui.data.Data.validLogin;
 import static ru.iteco.fmhandroid.ui.data.Data.validPassword;
+import static ru.iteco.fmhandroid.ui.data.Data.emptyLogOrPass;
+import static ru.iteco.fmhandroid.ui.data.Data.invalidLogOrPass;
 
 import io.qameta.allure.kotlin.Allure;
 import ru.iteco.fmhandroid.R;
@@ -68,10 +70,10 @@ public class AuthorizationSteps {
     }
     public void emptyLoginOrPassword(){
         Allure.step("Пустой логин или пароль");
-        onView(allOf(withContentDescription("Логин и пароль не могут быть пустыми"), isDisplayed()));
+        onView(allOf(withContentDescription(emptyLogOrPass), isDisplayed()));
     }
     public void invalidLoginOrPassword(){
         Allure.step("Неверный логин или пароль");
-        onView(allOf(withContentDescription("Что-то пошло не так. Попробуйте позднее."), isDisplayed()));
+        onView(allOf(withContentDescription(invalidLogOrPass), isDisplayed()));
     }
 }

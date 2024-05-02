@@ -21,4 +21,6 @@ public class Data {
     public static final String emptyDescription = "";
     public static final String emptyFieldsError = "Заполните пустые поля";
     public static final String notFromListCategoryError = "Сохранение не удалось. Попробуйте позднее.";
+    public static final String emptyLogOrPass = "Логин и пароль не могут быть пустыми";
+    public static final String invalidLogOrPass = "Что-то пошло не так. Попробуйте позднее.";
 }
