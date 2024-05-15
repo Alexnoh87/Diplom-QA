@@ -8,8 +8,6 @@ import static androidx.test.espresso.matcher.ViewMatchers.isRoot;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static androidx.test.espresso.matcher.ViewMatchers.withText;
 
-import org.hamcrest.Matchers;
-
 public class News {
     public ViewInteraction newsPage = onView(withId(R.id.container_list_news_include));
     public ViewInteraction sort = onView(withId(R.id.sort_news_material_button));

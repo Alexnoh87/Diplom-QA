@@ -166,7 +166,7 @@ public class NewsTests {
         news.enterDescription(description);
         closeSoftKeyboard();
         news.saveButton();
-        news.checkingControlPanelPage();
+        news.checkNews();
     }
 
     @Test

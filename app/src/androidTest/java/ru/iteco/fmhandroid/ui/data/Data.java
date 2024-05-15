@@ -15,7 +15,7 @@ public class Data {
     public static final String category = "День рождения";
     public static final String notFromListCategory = "Просто так";
     public static final String emptyCategory = "";
-    public static final String tittle = "Заголовок";
+    public static final String tittle = "Тестовый заголовок";
     public static final String emptyTittle = "";
     public static final String description = "Описание";
     public static final String emptyDescription = "";

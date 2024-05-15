@@ -2,6 +2,7 @@ package ru.iteco.fmhandroid.ui.steps;
 
 import static ru.iteco.fmhandroid.ui.data.Data.emptyFieldsError;
 import static ru.iteco.fmhandroid.ui.data.Data.notFromListCategoryError;
+import static ru.iteco.fmhandroid.ui.data.Data.tittle;
 import static ru.iteco.fmhandroid.ui.data.Utils.waitDisplayed;
 
 import io.qameta.allure.kotlin.Allure;
@@ -12,6 +13,10 @@ import static androidx.test.espresso.action.ViewActions.*;
 import static androidx.test.espresso.assertion.ViewAssertions.matches;
 import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static androidx.test.espresso.matcher.ViewMatchers.withContentDescription;
+import static androidx.test.espresso.matcher.ViewMatchers.withText;
+
+import static org.hamcrest.core.AllOf.allOf;
+
 import org.hamcrest.Matchers;
 
 public class NewsSteps {
@@ -135,5 +140,9 @@ public class NewsSteps {
     public void cancelButton() {
         Allure.step("Нажать на кнопку отменить");
         news.cancelButton.perform(click());
+    }
+    public void checkNews() {
+        Allure.step("Проверить созданную новость");
+        onView(allOf(withText(tittle))).check(matches(isDisplayed()));
     }
 }
